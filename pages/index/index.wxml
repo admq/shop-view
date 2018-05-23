@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<!-- <view class="container"> -->
+<view class="home">
+
+  <view class="shop">
+    <view style="font-size: 19px; font-weight: 500;">永久商贸城</view>
+    <view style="font-size: 14px; font-weight: 300;">长沙新民路店</view>
+
+    <view style="position: absolute; width: 30px; height: 30px; top: 2%; right: 6%;">
+      <image src="/images/shopping-logo-4.png" style="width: 40px; height: 40px;"></image>
+    </view>
+
+    <view style="border-bottom: 1.5px dashed #bbb;margin: 15px 0 10px 0;"></view>
+
+    <view class="row">
+      <!-- <navigator url="/pages/map/map"> -->
+      <navigator bindtap="openMap">
+        <text class="iconfont icon-coordinates"></text>
+          湖南省长沙市岳麓区新民路4号久和物业大厦
+        <text style="font-size: 13px;font-weight: 500;float: right;" class="iconfont icon-enter"></text>
+      </navigator>
+    </view>
+    <view class="row">
+      <text class="iconfont icon-time"></text>
+      9:00 - 18:00
+    </view>
+    <view class="row" bindtap="phoneCall">
+      <navigator>
+        <text class="iconfont icon-mobilephone"></text>
+        <text style="font-weight: 400;"> {{phoneNumber}}</text>
+        <text style="font-size: 13px;font-weight: 500;float: right;" class="iconfont icon-enter"></text>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- <button type="default" bindtap="openMap">打开地图</button> -->
+
+  <view class="object-list">
+    <view class="object-item" wx:for="{{objectList}}">
+      <view class="image">
+        <image wx:if="{{item.image}}" mode="widthFix" src="{{item.image}}"></image>
+        <!-- <image wx:else  mode="aspectFit" src="/images/LawBooks.jpg"></image> -->
+        <image wx:else  mode="widthFix" src="/images/good-1.jpeg"></image>
+      </view>
+      <view class="info">
+        <!-- {{item.name}} -->
+        <view class="name">{{item.name}}</view>
+        <view class="price">¥ {{item.price}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>
