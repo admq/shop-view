@@ -51,18 +51,27 @@ Page({
       phoneNumber: this.data.phoneNumber
     })
   },
+  // 地图
   openMap: function(e) {
-    wx.getLocation({
-      type: 'gcj02', // 返回可以用于wx.openLocation的经纬度
-      success: function(res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
-          scale: 28
+    wx.openLocation({
+      latitude: 39.908856,
+      longitude: 116.397395
+    })
+  },
+  tap: function(e) {
+    for (var i = 0; i < order.length; ++i) {
+      if (order[i] === this.data.toView) {
+        this.setData({
+          toView: order[i + 1],
+          scrollTop: (i + 1) * 200
         })
+        break
       }
+    }
+  },
+  tapMove: function(e) {
+    this.setData({
+      scrollTop: this.data.scrollTop + 10
     })
   },
   onLoad: function () {

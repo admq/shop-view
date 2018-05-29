@@ -1,6 +1,10 @@
 <!--logs.wxml-->
 <view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
+  <!-- <web-view src="https://mp.weixin.qq.com/"></web-view> -->
+  <!-- <web-view src="https://www.jd.com/"></web-view> -->
+  <web-view src="https://mp.weixin.qq.com/"></web-view>
+
+  <!-- <block wx:for="{{logs}}" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+  </block> -->
 </view>

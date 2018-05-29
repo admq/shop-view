@@ -2,6 +2,16 @@
 <!-- <view class="container"> -->
 <view class="home">
 
+  <!-- 全局浮动电话、地址定位、客服图标 -->
+  <view class="global-float">
+    <view class="global-float-item" bindtap="openMap">
+      <text class="iconfont icon-coordinates_fill"></text>
+    </view>
+    <view class="global-float-item" bindtap="phoneCall">
+      <text class="iconfont icon-mobilephone_fill"></text>
+    </view>
+  </view>
+
   <view class="shop">
     <view style="font-size: 19px; font-weight: 500;">永久商贸城</view>
     <view style="font-size: 14px; font-weight: 300;">长沙新民路店</view>
@@ -33,7 +43,20 @@
     </view>
   </view>
 
-  <!-- <button type="default" bindtap="openMap">打开地图</button> -->
+  <!-- 轮播图 -->
+  <!-- <scroll-view class="scroll-view" scroll-x style="width: 100%">
+    <view id="green" class="bc_green"></view>
+    <view id="red"  class="bc_red"></view>
+    <view id="yellow" class="bc_yellow"></view>
+    <view id="blue" class="bc_blue"></view>
+  </scroll-view> -->
+  <view class="page-section-spacing">
+    <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+      <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
+      <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
+      <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
+    </scroll-view>
+  </view>
 
   <view class="object-list">
     <view class="object-item" wx:for="{{objectList}}">

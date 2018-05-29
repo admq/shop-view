@@ -80,9 +80,111 @@
   align-self: flex-end;
 }
 
+/* 全局浮动图标 */
+.global-float {
+  height: 200rpx;
+  width: 80rpx;
+  /* background: #c54146; */
+  /* border: 1px solid #c54146; */
+  position: fixed;
+  right: 5%;
+  top: 70%;
+  z-index: 999;
+}
+.global-float-item {
+  margin-bottom: 20rpx;
+  border-radius: 40rpx;
+  height: 80rpx;
+  text-align: center;
+  background: #9eadbb; 
+  /* opacity: 0.5; */
+  background-color:rgba(158,173,187,0.7)
+}
+.global-float-item text {
+  font-size: 36px;
+  font-weight: 500;
+  color: #3c4146;
+}
+.global-float-item text:hover {
+  color: rgb(134, 141, 148);
+}
 
+/* 轮播图 */
+.scroll-view {
+  width: 100%;
+  height: 200rpx;
+  margin-bottom: 10rpx;
+}
+.scroll-view view {
+  width: 100%;
+  height: 100%;
+}
+.bc_green { background-color: green; }
+.bc_red { background-color: red; }
+.bc_yellow { background-color: yellow; }
+.bc_blue { background-color: blue; }
 
+.page-section-spacing{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 300rpx;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}
 
+.demo-text-1{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #1AAD19;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+.demo-text-1:before{
+  content: 'A';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.demo-text-2{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #2782D7;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+.demo-text-2:before{
+  content: 'B';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.demo-text-3{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F1F1;
+  color: #353535;
+  font-size: 36rpx;
+}
+.demo-text-3:before{
+  content: 'C';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 @font-face {font-family: "iconfont";
