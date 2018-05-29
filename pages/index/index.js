@@ -36,7 +36,32 @@ Page({
     phoneNumber: '0731-88738273',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 2000,
+    duration: 500
+  },
+  changeIndicatorDots: function (e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
+  changeAutoplay: function (e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    })
+  },
+  intervalChange: function (e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  },
+  durationChange: function (e) {
+    this.setData({
+      duration: e.detail.value
+    })
   },
   // 事件处理函数
   bindViewTap: function() {
@@ -56,22 +81,6 @@ Page({
     wx.openLocation({
       latitude: 39.908856,
       longitude: 116.397395
-    })
-  },
-  tap: function(e) {
-    for (var i = 0; i < order.length; ++i) {
-      if (order[i] === this.data.toView) {
-        this.setData({
-          toView: order[i + 1],
-          scrollTop: (i + 1) * 200
-        })
-        break
-      }
-    }
-  },
-  tapMove: function(e) {
-    this.setData({
-      scrollTop: this.data.scrollTop + 10
     })
   },
   onLoad: function () {

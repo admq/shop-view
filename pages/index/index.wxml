@@ -50,12 +50,16 @@
     <view id="yellow" class="bc_yellow"></view>
     <view id="blue" class="bc_blue"></view>
   </scroll-view> -->
-  <view class="page-section-spacing">
-    <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-      <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
-      <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
-      <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
-    </scroll-view>
+
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
 
   <view class="object-list">
