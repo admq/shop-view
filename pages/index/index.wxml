@@ -12,7 +12,8 @@
     </view>
   </view>
 
-  <view class="shop">
+  <!-- 商城基本信息 -->
+  <!-- <view class="shop">
     <view style="font-size: 19px; font-weight: 500;">永久商贸城</view>
     <view style="font-size: 14px; font-weight: 300;">长沙新民路店</view>
 
@@ -23,7 +24,6 @@
     <view style="border-bottom: 1.5px dashed #bbb;margin: 15px 0 10px 0;"></view>
 
     <view class="row">
-      <!-- <navigator url="/pages/map/map"> -->
       <navigator bindtap="openMap">
         <text class="iconfont icon-coordinates"></text>
           湖南省长沙市岳麓区新民路4号久和物业大厦
@@ -41,27 +41,54 @@
         <text style="font-size: 13px;font-weight: 500;float: right;" class="iconfont icon-enter"></text>
       </navigator>
     </view>
-  </view>
+  </view> -->
 
   <!-- 轮播图 -->
-  <!-- <scroll-view class="scroll-view" scroll-x style="width: 100%">
-    <view id="green" class="bc_green"></view>
-    <view id="red"  class="bc_red"></view>
-    <view id="yellow" class="bc_yellow"></view>
-    <view id="blue" class="bc_blue"></view>
-  </scroll-view> -->
-
   <view class="page-section page-section-spacing swiper">
-    <swiper indicator-dots="{{indicatorDots}}"
+    <swiper class="scroll-view" indicator-dots="{{indicatorDots}}"
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{background}}" wx:key="*this">
         <swiper-item>
-          <view class="swiper-item {{item}}"></view>
+          <view class="swiper-item">
+            <image src="/images/swiper-{{index+1}}.jpeg" style="width: 100%;"></image>
+          </view>
         </swiper-item>
       </block>
     </swiper>
   </view>
 
+  <!-- 分类 -->
+  <view class="category">
+    <view class="item-block">
+      <view class="item">
+        <text class="iconfont icon-coupons"></text>
+      </view>
+      <view class="item-title">优惠</view>
+    </view>
+    <view class="item-block">
+      <view class="item">
+        <text class="iconfont icon-shop_fill"></text>
+      </view>
+      <view class="item-title">商城</view>
+    </view>
+    <view class="item-block">
+      <view class="item">
+        <text class="iconfont icon-manage"></text>
+      </view>
+      <view class="item-title">分类</view>
+    </view>
+    <view class="item-block">
+      <view class="item">
+        <text class="iconfont icon-like"></text>
+      </view>
+      <view class="item-title">收藏</view>
+    </view>
+  </view>
+  
+  <!-- 为您推荐 -->
+  <view style="text-align: center;color: #555;font-size: 15px;font-weight: 350;margin: 10px 0 5px 0;">为您推荐</view>
+
+  <!-- 两列商品列表 -->
   <view class="object-list">
     <view class="object-item" wx:for="{{objectList}}">
       <view class="image">

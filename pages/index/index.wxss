@@ -110,73 +110,66 @@
 
 /* 轮播图 */
 .scroll-view {
-  width: 100%;
-  height: 200rpx;
-  margin-bottom: 10rpx;
+  height: 200px;
 }
-.scroll-view view {
-  width: 100%;
-  height: 100%;
-}
-.bc_green { background-color: green; }
-.bc_red { background-color: red; }
-.bc_yellow { background-color: yellow; }
-.bc_blue { background-color: blue; }
-
 .swiper-item{
   display: block;
-  height: 150px;
+  /* height: 300px; */
+
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 36rpx;
 }
-.page-section-spacing{
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
+.swiper-item:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.demo-text-1{
-  position: relative;
+.page-section-spacing {
+  /* margin-top: 20rpx; */
+  /* margin-bottom: 20rpx; */
+}
+
+/* 分类 */
+.category {
+  /* margin: 20rpx 0 10rpx 0; */
+  padding: 20rpx 0;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+.category .item-block {
+  text-align: center;
+}
+.category .item-title {
+  font-size: .75rem;
+  color: #333444;
+  font-weight: 400; 
+  margin-top: 5rpx;
+}
+.category .item {
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1AAD19;
-  color: #FFFFFF;
-  font-size: 36rpx;
+  width: calc(100vw / 7.5);
+  height: calc(100vw / 7.5);
+  border: 3rpx solid #e44943;
+  box-sizing: border-box;
+  border-radius: calc(100vw / 7.5);
+  color: #e44943;
 }
-.demo-text-1:before{
-  content: 'A';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.category .item .iconfont {
+  font-size: 1.5rem;
 }
-.demo-text-2{
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  background-color: #2782D7;
-  color: #FFFFFF;
-  font-size: 36rpx;
-}
-.demo-text-2:before{
-  content: 'B';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.demo-text-3{
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(215, 223, 105);
-  color: #353535;
-  font-size: 36rpx;
-}
-.demo-text-3:before{
-  content: 'C';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 
 
 @font-face {font-family: "iconfont";

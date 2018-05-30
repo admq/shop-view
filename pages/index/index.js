@@ -37,7 +37,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
+    background: ['swiper-1.jpeg', 'swiper-2.jpeg', 'swiper-3.jpeg'],
     indicatorDots: true,
     autoplay: true,
     interval: 2000,
