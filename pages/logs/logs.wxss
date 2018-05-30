@@ -1,3 +1,5 @@
+@import '../common/lib/icons.wxss';
+
 .log-list {
   display: flex;
   flex-direction: column;
@@ -5,4 +7,23 @@
 }
 .log-item {
   margin: 10rpx;
+}
+
+
+
+/** 商家信息展示 **/
+.shop {
+  background-color: white;
+  width: 100%;
+  /* border-bottom: 2rpx solid #f3f3f3; */
+  /* border-radius: 8rpx; */
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+}
+.shop .row {
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  font-weight: 300;
 }
